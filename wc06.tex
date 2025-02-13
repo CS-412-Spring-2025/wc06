@@ -56,9 +56,9 @@ Consider the following divide-and-conquer algorithm which multiplies 2 n-bit \te
     \item $m = \lfloor n / 2 \rfloor$
     \item $x_L = \lfloor x / 2^m \rfloor, \quad x_R = x \mod 2^m$
     \item $y_L = \lfloor y / 2^m \rfloor, \quad y_R = y \mod 2^m$
-    \item $P_1 = \textsc{Multiply}(x_L, y_L)$
-    \item $P_2 = \textsc{Multiply}(x_R, y_R)$
-    \item $P_3 = \textsc{Multiply}(x_L + x_R, y_L + y_R)$
+    \item $P_1 = \textsc{Multiply-Binary}(x_L, y_L)$
+    \item $P_2 = \textsc{Multiply-Binary}(x_R, y_R)$
+    \item $P_3 = \textsc{Multiply-Binary}(x_L + x_R, y_L + y_R)$
     \item \textbf{return} $P_1 \cdot 2^n + (P_3 - P_1 - P_2) \cdot 2^m + P_2$
 \end{enumerate}
 
